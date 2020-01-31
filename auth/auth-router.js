@@ -5,6 +5,7 @@ const bcryptjs = require('bcryptjs'); // dependancy for hash of pass best bpract
 const jwt = require('jsonwebtoken');// DEPENDANCY FOR TOKENS
 
 const myMidWare = require('./secret.js');
+const isLoggedIn = require('./authenticate-middleware.js');
 
 const UserModel = require('./userModel.js');
 
@@ -49,6 +50,16 @@ router.post('/login', (req, res) => {
     });
 });
 
+/* SANITY TEST OF AUTH WORKING
+router.get('/users', isLoggedIn, (request, responce) => {
+  UserModel.listUsers()
+    .then(users => { responce.json(users); })
+    .catch( error => {
+      console.log(error);
+      responce.status(500).json( {error: "Get USERS Failed."} )
+    })
+});
+AND COMENT OUT DUE TO REQ TO TEST ENDPOINTS*/
 
 //TOKEN
 function signToken(user) {
