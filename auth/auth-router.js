@@ -50,7 +50,7 @@ router.post('/login', (req, res) => {
     });
 });
 
-/* SANITY TEST OF AUTH WORKING
+/* SANITY TEST OF AUTH WORKING*/
 router.get('/users', isLoggedIn, (request, responce) => {
   UserModel.listUsers()
     .then(users => { responce.json(users); })
@@ -59,7 +59,7 @@ router.get('/users', isLoggedIn, (request, responce) => {
       responce.status(500).json( {error: "Get USERS Failed."} )
     })
 });
-AND COMENT OUT DUE TO REQ TO TEST ENDPOINTS*/
+//AND COMENT OUT DUE TO REQ TO TEST ENDPOINTS*/
 
 //TOKEN
 function signToken(user) {
