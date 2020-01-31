@@ -39,6 +39,7 @@ Commit your code regularly and use descriptive messages. This helps both you (in
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] What is the purpose of using _sessions_?
+##### Answer: To have a form of authentication of a user that is under the control more or less of the server.
 
 - [ ] What does bcrypt do to help us store passwords in a secure manner.
 
